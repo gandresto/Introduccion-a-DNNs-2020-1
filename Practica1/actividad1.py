@@ -1,8 +1,12 @@
+# -*- coding: utf-8 -*-
+#%%
 import numpy as np
 import matplotlib.pyplot as plt
 
+#%%
 x = np.array([-5, 3, 8, -10])
 
+#%%
 fig = plt.figure()
 ax = fig.add_subplot(1,1,1)
 ax.set_title('Vector basura')
@@ -15,5 +19,5 @@ ax.annotate('Bajada', xy=(2.5, -2.5),
                         xytext=(2, -2),
                         arrowprops={'facecolor' : 'red'})
 plt.plot(x, markerfacecolor='blue', marker='o')
-
+plt.grid(axis='both')
 plt.show()
