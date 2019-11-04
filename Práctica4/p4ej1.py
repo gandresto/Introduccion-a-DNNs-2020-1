@@ -1,5 +1,6 @@
 import numpy as np
 import perceptron as per
+import matplotlib.pyplot as plt
 
 p_vect = [np.matrix([1, -1, -1]), np.matrix([1, 1, -1])]
 t_vect = [0, 1]
@@ -22,3 +23,9 @@ for i in range(epochs):
         #print('w = ', w)
         #print('b = ', b)
         print("Epoca %d, Error = %d" % (i, e))
+
+plt.plot(e_vect)
+plt.title('Error vs iteraciones')
+plt.ylabel('Error')
+plt.xlabel('Iteraciones')
+plt.show()
